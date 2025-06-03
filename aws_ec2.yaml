@@ -1,0 +1,13 @@
+plugin: amazon.aws.aws_ec2
+# we can giving paramters to query the servers
+regions:
+  - N. Virginia
+filters:
+  tag:Name: nginx
+  instance-state-name: running
+# here, we are access only private ip address of nginx running servers
+hostnames:
+  - private-ip-address
+# here, it will connect to hosts using private Ip address
+compose:
+  ansible_host: private-ip-address
