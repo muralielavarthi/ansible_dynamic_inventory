@@ -1,7 +1,7 @@
 plugin: amazon.aws.aws_ec2
 # we can giving paramters to query the servers
 regions:
-  - N. Virginia
+  - us-east-1
 filters:
   tag:Name: nginx
   instance-state-name: running
