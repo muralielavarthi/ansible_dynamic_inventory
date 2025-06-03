@@ -1,5 +1,5 @@
 - name: configure nginx server
-  hosts: nginx # mention nginx here, it will connect all nginx servers
+  hosts: all # mention all here
   become: yes
   tasks:
     - name: install nginx
