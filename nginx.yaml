@@ -1,6 +1,7 @@
 - name: configure nginx server
   hosts: all # mention all here
   become: yes
+  serial: 5
   tasks:
     - name: install nginx
       ansible.builtin.package:
